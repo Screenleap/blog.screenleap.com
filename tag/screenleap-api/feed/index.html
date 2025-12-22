@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Screenleap API &#8211; Screenleap Blog</title>
+	<atom:link href="https://blog.screenleap.com/tag/screenleap-api/feed/" rel="self" type="application/rss+xml" />
+	<link>https://blog.screenleap.com</link>
+	<description>Live-Collaboration Platform for Your Website</description>
+	<lastBuildDate>Wed, 11 May 2022 00:29:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+<site xmlns="com-wordpress:feed-additions:1">182819694</site>	<item>
+		<title>Installation-Free Sharing Is Now Available for the Screenleap API</title>
+		<link>https://blog.screenleap.com/2021/05/14/installation-free-sharing-is-now-available-for-the-screenleap-api/</link>
+					<comments>https://blog.screenleap.com/2021/05/14/installation-free-sharing-is-now-available-for-the-screenleap-api/#respond</comments>
+		
+		<dc:creator><![CDATA[Screenleap]]></dc:creator>
+		<pubDate>Sat, 15 May 2021 06:56:45 +0000</pubDate>
+				<category><![CDATA[Screenleap]]></category>
+		<category><![CDATA[Screenleap API]]></category>
+		<guid isPermaLink="false">https://blog.screenleap.com/?p=2197</guid>
+
+					<description><![CDATA[We are excited to share that the installation-free sharing option that has been available on the Screenleap site is now available in our API. You will now be able to offer your users the ability to start share sessions from your website and allow them to interact with other users through screen sharing, 2-way audio [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p style="float: right; margin: 0 0 10px 15px; width:240px; height: auto;">
+		<img src="https://blog.screenleap.com/wp-content/uploads/2021/05/api_default_presenter_ui.png" width="240" style="max-width: 100%; height: auto;" />
+		</p>
+<p>We are excited to share that the installation-free sharing option that has been available on the Screenleap site is now available in our API. You will now be able to offer your users the ability to start share sessions from your website and allow them to interact with other users through screen sharing, 2-way audio conferencing, and video conferencing—all without needing anyone to install any software. All they need is a modern web browser. </p>
+
+
+
+<p><strong>Installation-Free Sharing</strong></p>
+
+
+
+<p>With this release, you will now be able to offer installation-free sharing and viewing to all your users who are using a modern desktop browser (Chrome, Edge, Firefox, and Safari). Viewers will be able to continue to take advantage of the convenience of installation-free viewing while presenters will now also benefit from the convenience and benefits of installation-free sharing. This includes never needing to worry about needing to install a native app in order to join a share session or having to worry about a mandatory app update at an inopportune time right before an important meeting.</p>
+
+
+
+<p><strong>Default Presenter UI</strong></p>
+
+
+
+<p>To make it even easier for you to integrate with installation-free sharing, we have added a default presenter UI that you can use to get started with. The default presenter UI will show toggles for all enabled options as well as buttons for change the screen source and for stopping the share session.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="640" height="83" src="https://blog.screenleap.com/wp-content/uploads/2021/05/api_default_presenter_ui.png" alt="" class="wp-image-2241" srcset="https://blog.screenleap.com/wp-content/uploads/2021/05/api_default_presenter_ui.png 640w, https://blog.screenleap.com/wp-content/uploads/2021/05/api_default_presenter_ui-300x39.png 300w" sizes="(max-width: 640px) 100vw, 640px" /></figure>
+
+
+
+<p>If you want to create a completely custom UI for your integration, you can disable the default presenter UI by passing <code>useDefaultPresenterUI=false</code> in your request to create a new share session.</p>
+
+
+
+<p><strong>Audio Conferencing and Video Conferencing</strong></p>
+
+
+
+<p>Our long-term goal at Screenleap has always been to make it ridiculously easy for you to enable live-collaboration on your website or web app. As a step towards achieving that goal, we are excited to also announce that you can now enable 2-way audio conferencing and video conferencing when using our new installation-free sharing option. This will allow you to give your presenters the ability to chat with their viewers through their computer&#8217;s microphone and speakers and also share their screen and webcam video with them. 2-way audio conferencing is currently in beta and video conferencing is currently in an experimental state, so they are not always guaranteed to work. Please alert us of any issues that you discovered so we can investigate them.</p>
+
+
+
+<p>To enable 2-way audio conferencing, add <code>enableComputerAudio=true</code> to your create share session request. To enable video conferencing, add <code>enableVideoConferencing=true</code> to your create screen share request.</p>
+
+
+
+<p><strong>New API Defaults</strong></p>
+
+
+
+<p>We have updated some of the defaults that you can specify in your requests to create an API share session and in your viewer URL. Please note the following changes to the defaults:</p>
+
+
+
+<ul class="wp-block-list"><li><strong>includeDefaultPresenterUI</strong>&nbsp;&#8211; We are now supporting a default presenter UI for installation-free API share sessions. It will be enabled by default. If you would like to disable it so you can create your own custom presenter UI using our lower-level API calls, you will need to include <code>includeDefaultPresenterUI=false</code> in your create share session request.</li><li><strong>showResize</strong>&nbsp;&#8211; This viewer URL parameter will now default to true. If you do not want the resize controls to be visible, please include <code>showResize=false</code> in the viewer URL.</li><li><strong>showStop</strong>&nbsp;&#8211; This viewer URL parameter will now default to true. If you do not want the stop button to be shown to viewers, please include <code>showResize=false</code> in the viewer URL.</li></ul>
+
+
+
+<p><strong>Even Easier Integration Coming Soon</strong></p>
+
+
+
+<p>Currently, we do not recommend using a JavaScript-only integration as it exposes your API credentials to everyone, which allows nefarious users to create share sessions using your account. To make it even easier to integrate with your website in the future, we are working to support a JavaScript-only integration that does not expose your API credentials so you don&#8217;t need to make a server-side call to create the share session. Please stay tuned for more information about this simpler integration option.</p>
+
+
+
+<p><strong>We Would Love Your Feedback</strong></p>
+
+
+
+<p>Please let us know what you think about our new installation-free sharing option and if they are any changes we can make to make it even more useful to you!</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.screenleap.com/2021/05/14/installation-free-sharing-is-now-available-for-the-screenleap-api/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2197</post-id>	</item>
+		<item>
+		<title>Recording Feature Now Available For the Screenleap API</title>
+		<link>https://blog.screenleap.com/2015/08/03/recording-feature-now-available-for-the-screenleap-api/</link>
+					<comments>https://blog.screenleap.com/2015/08/03/recording-feature-now-available-for-the-screenleap-api/#respond</comments>
+		
+		<dc:creator><![CDATA[Screenleap]]></dc:creator>
+		<pubDate>Mon, 03 Aug 2015 12:00:42 +0000</pubDate>
+				<category><![CDATA[Screenleap]]></category>
+		<category><![CDATA[Cost Recording Duration]]></category>
+		<category><![CDATA[Developer Account]]></category>
+		<category><![CDATA[HTTP]]></category>
+		<category><![CDATA[Screenleap API]]></category>
+		<guid isPermaLink="false">http://blog.screenleap.com/?p=1670</guid>
+
+					<description><![CDATA[We are excited to announce the general availability of the recording feature for the Screenleap API. The recording feature allows you to give your users the ability to record their screen shares from your products and services. Whether running a training session, giving someone support, or walking a client through a demo, your users can [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We are excited to announce the general availability of the recording feature for the Screenleap API. The recording feature allows you to give your users the ability to record their screen shares from your products and services. Whether running a training session, giving someone support, or walking a client through a demo, your users can now record their screen shares so that they are available for future viewing or for sharing with others.</p>
+<p><b>Using the Recording Feature</b></p>
+<p>You can enable recording of a screen share by adding the <code>recordVideo=true</code> parameter to your API request to create a new screen share. We offer the following JavaScript calls for controlling your recording:</p>
+<p><b><code>screenleap.startRecording()</code>:</b> Use this JavaScript call to start recording after your screen share has begun.</p>
+<p><b><code>screenleap.stopRecording()</code>:</b> Use this call to stop recording before the screen share has ended.</p>
+<p>If you would like to start recording as soon as your screen share starts, add <code>autoRecord=true</code> to the API request to create a new screen share.</p>
+<p><b>The Recording Process</b></p>
+<p>After the screen share being recorded ends, the recording will be processed and converted into an MP4 video. You will be notified when the processing has completed either via email or via an HTTP callback. We will provide you with a link in the notification that you can use to download your recording. You can edit the callback URL from your <a href="https://www.screenleap.com/developer/edit" target="_blank">Developer Account</a>.</p>
+<p>You can easily track the status of your recordings from the <a href="https://www.screenleap.com/developer/report" target="_blank">API Activity Report</a>. The report will also give you access to the download link for the recording. Please note that we only store recordings for a period of one month. You will need to download your MP4 file and store it somewhere else if you want to be able to access your recording beyond the one-month period.</p>
+<p><b>Pricing</b></p>
+<p>If you enable the recording feature for your API screen share, the cost of the recording will be calculated as follows: </p>
+<p><code>Cost = Recording Duration x Cost of 5 Participants</code></p>
+<p>As an example, our standard SSL screen share cost $0.01/minute per participant. If you enable recording for the screen share, the cost would be $0.05/minute multiplied by the duration of the recording. This cost would be in addition to the cost of the screen share.</p>
+<p><b>Limitations</b></p>
+<p>The recording feature currently doesn’t support the recording of audio, but it is something we hope to support in the future.</p>
+<p><b>Give It A Try!</b></p>
+<p>Our easy-to-use screen sharing just became easy to share! For more information on the recording feature, please check out our <a href="http://www.screenleap.com/api/recording" target="_blank">API recording</a> page.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.screenleap.com/2015/08/03/recording-feature-now-available-for-the-screenleap-api/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1670</post-id>	</item>
+		<item>
+		<title>Happy 2014!</title>
+		<link>https://blog.screenleap.com/2013/12/31/happy-2014/</link>
+					<comments>https://blog.screenleap.com/2013/12/31/happy-2014/#respond</comments>
+		
+		<dc:creator><![CDATA[Screenleap]]></dc:creator>
+		<pubDate>Tue, 31 Dec 2013 22:14:17 +0000</pubDate>
+				<category><![CDATA[Screenleap]]></category>
+		<category><![CDATA[API]]></category>
+		<category><![CDATA[Audio Conferencing]]></category>
+		<category><![CDATA[Branded Company]]></category>
+		<category><![CDATA[Branded Company Accoount]]></category>
+		<category><![CDATA[Customer Support Solution]]></category>
+		<category><![CDATA[Screen Sharing]]></category>
+		<category><![CDATA[Screenleap API]]></category>
+		<guid isPermaLink="false">http://blog.screenleap.com/?p=1316</guid>
+
+					<description><![CDATA[Happy New Year Screenleapers! As we bid goodbye to another great year, we would like to highlight the improvements made to Screenleap this year and give you a preview of what&#8217;s in the works for 2014. 2013 Highlights Audio Conferencing We launched integrated audio conferencing last January so that you can have a conversation with your viewers [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p style="float: right; margin: 0 0 10px 15px; width:240px; height: auto;">
+		<img src="https://blog.screenleap.com/wp-content/uploads/2013/12/2014.png" width="240" style="max-width: 100%; height: auto;" />
+		</p><p><a href="https://blog.screenleap.com/wp-content/uploads/2013/12/2014.png"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1321" alt="2014" src="https://blog.screenleap.com/wp-content/uploads/2013/12/2014.png" width="618" height="350" srcset="https://blog.screenleap.com/wp-content/uploads/2013/12/2014.png 618w, https://blog.screenleap.com/wp-content/uploads/2013/12/2014-300x169.png 300w" sizes="auto, (max-width: 618px) 100vw, 618px" /></a></p>
+<p><span style="line-height: 1.5em;">Happy New Year Screenleapers!</span></p>
+<p><span style="line-height: 1.5em;"><span style="line-height: 1.5em;">As we bid goodbye to another great year, we would like to highlight the improvements made to Screenleap this year and</span><span style="line-height: 1.5em;"><span style="line-height: 1.5em;"> give you a preview of what&#8217;s in the works for 2014.</span></span></span></p>
+<p><strong>2013 Highlights</strong></p>
+<p><strong>Audio Conferencing</strong><br />
+We launched <a href="http://blog.screenleap.com/2013/01/22/screenleap-launches-integrated-audio-conference-calling/">integrated audio conferencing</a> last January so that you can have a conversation with your viewers without having to use a separate conferencing service. Audio conferencing is available for free on all Screenleap accounts.</p>
+<p><strong>Screenshots</strong><br />
+In February, we launched <a href="http://www.screenleap.com/screenshots/overview">Screenshots</a>, a browser extension that allows you to easily take screenshots of web pages, mark them up, and share them with others.</p>
+<p><strong>Browser Sharing</strong><br />
+<span style="line-height: 1.5em;">The browser extension we launched in February also includes support for <a href="http://www.screenleap.com/browser-share">browser </a></span><span style="line-height: 1.5em;"><a href="http://www.screenleap.com/browser-share">sharing</a>. Browser sharing</span><span style="line-height: 1.5em;"> is like screen sharing except only the contents of your browser are shared. It&#8217;s especially convenient since it doesn&#8217;t require you to have Java installed, and it works on Chromebook computers.</span></p>
+<p><strong>Broadcast Page Customization</strong><br />
+In July, we added the ability to <a href="http://blog.screenleap.com/2013/07/08/customize-your-broadcast-page-message/">customize your broadcast page message</a>. When you create a Screenleap account, you select a personal handle. Now you can customize the message viewers see when they visit your handle page (e.g., http://screenleap.com/<em>your_handle</em>) when you are not broadcasting your screen.</p>
+<p><strong>Broadcast Restriction and Locking</strong><br />
+By default, broadcasts are public and viewable by anyone who visits your handle page. If you would like to share your screen to your handle page but want to restrict who can view your broadcast, you can do so as of the launch of <a href="http://blog.screenleap.com/2013/07/15/secure-your-broadcasts-with-broadcast-restriction-and-broadcast-locking/">broadcast restriction and locking</a> in late July.</p>
+<p><strong>Screenleap for Mac &amp; Screenleap for Windows</strong><br />
+Having made viewing installation-free and hassle-free, we next turned our attention to towards simplifying the screen share process. We launched our <a href="http://www.screenleap.com/desktop-screen-share#mac">Screenleap for Mac</a> and <a href="http://www.screenleap.com/desktop-screen-share#win">Screenleap for Windows</a> apps in August, which allow you to share your entire screen without having to first install Java on your computer.</p>
+<p><strong>Screenleap API, Version 2</strong><br />
+We released <a href="http://www.screenleap.com/api/update">version 2 of the Screenleap API</a> in September. The Screenleap API makes it easy to programatically add screen sharing to your web app. Version 2 includes support for additional sharing options, customization options, and integration options. You now have the option of allowing your presenters to share their screen using the Mac and Windows apps in addition to the applet.</p>
+<p><strong>What&#8217;s Coming in 2014</strong></p>
+<p><strong style="line-height: 1.5em;">Branded Company Accoount</strong><br />
+We will be launching our Branded Company Accounts next week. Branded Company Accounts will allow you to increase your viewers&#8217; exposure to your brand by providing them with a branded screen sharing experience for those important sales, support, and training calls. Branded Company Accounts will also include support for integrating the screen share viewer into your website, so your users don&#8217;t have to leave your website to view your screen shares.</p>
+<p><strong>Customer Support Solution</strong><br />
+Our upcoming <a href="http://www.screenleap.com/customer-support-software">customer support solution</a> will allow you to easily see your customers&#8217; screens so you can provide them with faster and more effective support.</p>
+<p><strong>Faster Screen Shares</strong><br />
+We will be taking advantage of a new web technology called WebRTC that allows us to double the performance of screen shares for browsers that support the new technology.</p>
+<p><strong>Wishing You a Happy 2014</strong></p>
+<p>We would like to thank you again for making 2013 a great one.  We really appreciate all the feedback and suggestions that you have provided us over the last year: Screenleap is the tool it is today because of you. Wishing you lots of health, happiness, and success in 2014!</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.screenleap.com/2013/12/31/happy-2014/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1316</post-id>	</item>
+		<item>
+		<title>Screenleap API, V2: New Sharing, Customization, and Integration Options</title>
+		<link>https://blog.screenleap.com/2013/09/18/screenleap-api-v2/</link>
+					<comments>https://blog.screenleap.com/2013/09/18/screenleap-api-v2/#respond</comments>
+		
+		<dc:creator><![CDATA[Screenleap]]></dc:creator>
+		<pubDate>Thu, 19 Sep 2013 01:00:12 +0000</pubDate>
+				<category><![CDATA[Screenleap]]></category>
+		<category><![CDATA[API]]></category>
+		<category><![CDATA[Build Something Great]]></category>
+		<category><![CDATA[Customization Options]]></category>
+		<category><![CDATA[Integation Options]]></category>
+		<category><![CDATA[Integration Options]]></category>
+		<category><![CDATA[Screenleap API]]></category>
+		<category><![CDATA[Sharing Options]]></category>
+		<guid isPermaLink="false">http://blog.screenleap.com/?p=1193</guid>
+
+					<description><![CDATA[When we launched the Screenleap API a year ago, it was in response to your requests asking for a way to integrate our quick &#38; easy screen sharing service with your applications. Since then, hundreds of you have used our API to add screen sharing to your audio conferencing solutions, e-learning platforms, webinar products, and [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p style="float: right; margin: 0 0 10px 15px; width:240px; height: auto;">
+		<img src="https://blog.screenleap.com/wp-content/uploads/2013/09/screenleap_api_v2_demo.png" width="240" style="max-width: 100%; height: auto;" />
+		</p><p>When we launched the Screenleap API a year ago, it was in response to your requests asking for a way to integrate our quick &amp; easy screen sharing service with your applications. Since then, hundreds of you have used our API to add screen sharing to your audio conferencing solutions, e-learning platforms, webinar products, and much more.</p>
+<p>To celebrate the one year anniversary of our API, we are excited to announce the launch of version 2, which offers additional sharing, customization, and integration options. We highlight the major changes below. Please see our <a href="http://www.screenleap.com/api/update">API Updates</a> page for a complete list of all changes.</p>
+<div style="margin-top: 48px; margin-bottom: 24px;"><strong>Sharing Options</strong></div>
+<p>Sharing your screen was enabled through our Java applet in version 1 of our API. With version 2, we introduce two additional sharing options: 1) native apps for Macs and Windows and 2) a browser extension.</p>
+<p>The native apps allow your users to share their screen by downloading and running a small app. They have the benefit of allowing your users to share their entire screen without having  to install Java on their computers.</p>
+<p>The browser extension allows your users to share the contents of their browser windows. Although limited to sharing browser content, the browser extension does not require Java to be installed nor does it require any software download.</p>
+<div style="margin-top: 48px; margin-bottom: 24px;"><strong>Customization Options</strong></div>
+<p>Version 2 introduces additional options for customizing your screen shares to match your requirements. You can now hide many of the controls that are shown in the presenter control panel, such as the pause button, stop button, and the toggle for switching between partial and full screen modes. We also now allow you to customize the title that is shown on the control panel so you can use your own branding.</p>
+<p>For the viewer page, you can now specify whether you want to default the viewer page to the actual size of the screen being shared or to shrink the screen so it fits in the users&#8217; browser window.</p>
+<p>Finally, it is now possible to localize the sharing control panel and the viewer page to your own language. Please <a href="http://www.screenleap.com/support">contact us</a> for details on how to do so.</p>
+<div style="margin-top: 48px; margin-bottom: 24px;"><strong>Integration Options</strong></div>
+<p>Version 2 of our API allows you to achieve tighter integration with our screen sharing service through the use of JavaScript callbacks. The callbacks allow your application to be notified of events such as when a screen share starts, when a screen share ends, when a viewer connects, and when a viewer disconnects. You can use this information to do things like show or hide additional information about a viewer as they enter or leave the screen share.</p>
+<div style="margin-top: 48px; margin-bottom: 24px;"><strong>API Demo</strong></div>
+<p>We have revamped our <a href="http://www.screenleap.com/api/demo">API Demo</a> page to include all the options available in our API. You can start screen shares and play around with the various sharing and customization options from the demo page.</p>
+<p><a href="https://blog.screenleap.com/wp-content/uploads/2013/09/screenleap_api_v2_demo.png"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1247" alt="screenleap_api_v2_demo" src="https://blog.screenleap.com/wp-content/uploads/2013/09/screenleap_api_v2_demo.png" width="618" height="447" srcset="https://blog.screenleap.com/wp-content/uploads/2013/09/screenleap_api_v2_demo.png 618w, https://blog.screenleap.com/wp-content/uploads/2013/09/screenleap_api_v2_demo-300x216.png 300w" sizes="auto, (max-width: 618px) 100vw, 618px" /></a></p>
+<div style="margin-top: 48px; margin-bottom: 24px;"><strong>Build Something Great</strong></div>
+<p>We are excited to see what you build with the new API. If you have any questions about any of the new options or having some questions about how to integrate with the API, please <a href="http://www.screenleap.com/support">contact us</a> for assistance. We would also love to profile how you are using the Screenleap API on our site so please <a href="https://screenleap.wufoo.com/forms/api-customer-success-stories/" target="_blank">share your story with us</a>!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.screenleap.com/2013/09/18/screenleap-api-v2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1193</post-id>	</item>
+		<item>
+		<title>API Customer Success Story: TechChange</title>
+		<link>https://blog.screenleap.com/2013/07/29/api-customer-success-story-techchange/</link>
+					<comments>https://blog.screenleap.com/2013/07/29/api-customer-success-story-techchange/#respond</comments>
+		
+		<dc:creator><![CDATA[Screenleap]]></dc:creator>
+		<pubDate>Mon, 29 Jul 2013 19:45:39 +0000</pubDate>
+				<category><![CDATA[Screenleap]]></category>
+		<category><![CDATA[API]]></category>
+		<category><![CDATA[Screenleap API]]></category>
+		<category><![CDATA[William Chester]]></category>
+		<guid isPermaLink="false">http://blog.screenleap.com/?p=898</guid>
+
+					<description><![CDATA[We love to hear all the amazing ways that companies and organizations are making use of the Screenleap API. We highlight TechChange today in the first of our API Success Story series. TechChange is a Washington, DC-based organization that provides technology training to humanitarian aid and international development workers. Their interactive e-learning platform has been used [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p style="float: right; margin: 0 0 10px 15px; width:240px; height: auto;">
+		<img src="https://blog.screenleap.com/wp-content/uploads/2013/07/techchange.png" width="240" style="max-width: 100%; height: auto;" />
+		</p><p>We love to hear all the amazing ways that companies and organizations are making use of the Screenleap API. We highlight TechChange today in the first of our API Success Story series.</p>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-910 alignright" style="border: 0;" alt="techchange" src="https://blog.screenleap.com/wp-content/uploads/2013/07/techchange.png" width="385" height="118" srcset="https://blog.screenleap.com/wp-content/uploads/2013/07/techchange.png 385w, https://blog.screenleap.com/wp-content/uploads/2013/07/techchange-300x91.png 300w" sizes="auto, (max-width: 385px) 100vw, 385px" /><a href="http://www.techchange.org/">TechChange</a> is a Washington, DC-based organization that provides technology training to humanitarian aid and international development workers. Their interactive e-learning platform has been used by more than 600 students from more than 70 countries. Through their courses, students have learned how to use technology to foster collaboration, transform conflicts, fight diseases, monitor elections, distribute food, and more. Their story has been featured in <a href="http://www.economist.com/blogs/feastandfamine/2012/06/technology-and-development">The Economist</a>.</p>
+<p>We got the opportunity to catch up with TechChange&#8217;s CTO, William Chester, to discuss the company and how they are using Screenleap to extend the real-time capabilities of their online learning platform.</p>
+<p><b>Can you tell us a little about yourself and your role at TechChange?</b></p>
+<p>As CTO of TechChange, I am responsible for development of the online learning platform. I took a somewhat circuitous route to this position. I&#8217;ve always been fascinated by computers and technology: I had the good fortune of having an older brother who would take apart all the electronics we had at home. I&#8217;d need to put it back together again in order to use it and I learned a lot about how things worked in the process. After studying International Relations and Chinese as an undergrad, I spent two years working at a foundation in China. I then moved back to DC and joined the TechChange team, where I draw on both my background in technology and my experience in international development.</p>
+<p><b>Why did TechChange decide to build its own e-learning platform?</b></p>
+<p>We researched the existing online learning platforms, but didn&#8217;t find any that met our needs. We saw an opportunity to create an online learning platform that was more engaging, social, and interactive, so we decided to build it. Our current platform puts a strong emphasis on live engagement with subject matter experts, practitioners, and other course participants.</p>
+<p><b>How did you learn about Screenleap?</b></p>
+<p>We initially used an alternative solution for screen sharing but found their Flash-based technology and lack of deep integration and customization a major frustration for our experts and participants. We began an exhaustive search for an alternative and found Screenleap. We were immediately drawn to Screenleap&#8217;s API integration and HTML5 technology stack.</p>
+<p><b>Why did you decide to integrate with the Screenleap API?</b></p>
+<p>Our former screen sharing solution required no less than six steps for a presenter to launch a screen share. This was often cumbersome, confusing, and frustrating. Even when it did work, it relied on Flash, which we found to be buggy, resource intensive, and generally unreliable. We use Screenleap&#8217;s API to implement a one-step solution that integrates seamlessly with our existing architecture. Using the powerful API, we have much greater control of our screen shares. The fact that Screenleap is built on HTML5 technologies and does not rely on Flash has greatly increased the flexibility and reliability of our system.</p>
+<p>In addition, Screenleap&#8217;s support has been outstanding from the very beginning. We&#8217;ve always received prompt, detailed, and informative responses to all of our inquiries. For all of these reasons we are thrilled to be using the Screenleap API in our platform.</p>
+<p><b>What are you doing with your Screenleap integration? What problems are you solving with the API?</b></p>
+<p>Incorporating global guest expert presentations into our courses is integral to our learning model. Because we draw on participants and experts from all over the world, we need a flexible solution that allows presenters to engage with our diverse user base in real-time. In a typical course we will invite 5-15 speakers to present to our participants about specific topics we&#8217;re covering in a course. Participants can follow along and ask questions via text chat or audio/video.</p>
+<p>The power of Screenleap is allowing technology experts to seamlessly demo their projects, tools, and platforms for a global audience. We also set up virtual office hours where course participants can drop by and view interactive demos from TechChange staff about how to use the latest tech tools for development. The ability to demonstrate these tools and approaches using Screenleap has been an invaluable addition to our platform and the learning outcomes of our participants.</p>
+<hr />
+<p>Doing something interesting with the API? <a href="https://screenleap.wufoo.com/forms/api-customer-success-stories/" target="_blank">Share your story with us</a> and get profiled on our site.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.screenleap.com/2013/07/29/api-customer-success-story-techchange/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">898</post-id>	</item>
+		<item>
+		<title>Add Screen Sharing To Your Site With the Screenleap API</title>
+		<link>https://blog.screenleap.com/2012/09/19/add-screen-sharing-to-your-site-with-the-screenleap-api/</link>
+					<comments>https://blog.screenleap.com/2012/09/19/add-screen-sharing-to-your-site-with-the-screenleap-api/#respond</comments>
+		
+		<dc:creator><![CDATA[Screenleap]]></dc:creator>
+		<pubDate>Wed, 19 Sep 2012 08:10:22 +0000</pubDate>
+				<category><![CDATA[Screenleap]]></category>
+		<category><![CDATA[API]]></category>
+		<category><![CDATA[Screen Sharing API]]></category>
+		<category><![CDATA[Screenleap API]]></category>
+		<guid isPermaLink="false">http://blog.screenleap.com/?p=383</guid>
+
+					<description><![CDATA[At Screenleap, we pride ourselves on making it free and easy to share your screen in seconds. No installation is required to view, so your viewers are literally a single click away from seeing your screen. And with the release of our Gmail extension this summer, you can start a screen share without leaving your inbox. Introducing the Screen [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p style="float: right; margin: 0 0 10px 15px; width:240px; height: auto;">
+		<img src="https://blog.screenleap.com/wp-content/uploads/2012/09/meditec.jpeg" width="240" style="max-width: 100%; height: auto;" />
+		</p><p>At Screenleap, we pride ourselves on making it free and easy to share your screen in seconds. No installation is required to view, so your viewers are literally a single click away from seeing your screen. And with the release of our <a title="Screenleap for Gmail Plugin – Share your screen instantly from within Gmail" href="http://blog.screenleap.com/2012/07/16/screenleap-for-gmail-plugin-share-your-screen-instantly-from-within-gmail/" target="_blank">Gmail extension</a> this summer, you can start a screen share without leaving your inbox.</p>
+<p><strong>Introducing the Screen Sharing API</strong></p>
+<p>We&#8217;re excited to announce that you can now add screen sharing to your own applications using our new screen-sharing-as-a-service <a title="Screenleap API" href="http://www.screenleap.com/api">API</a>. True to our mission of making screen-sharing easy and affordable for everyone, the API is competitively priced. We offer all developers 5 free hours of screen sharing each month, and charge just 1¢/min after that &#8212; that&#8217;s less than $1 per hour, no matter how many viewers you have.</p>
+<p>Getting up and running with Screenleap is a breeze. The <a title="API Documentation" href="http://www.screenleap.com/api/overview">API Overview</a> will walk you through the process of creating your own account and adding screen sharing to your site. You can have a basic implementation running in a matter of minutes. Screenleap&#8217;s API can be white-labeled and we will be releasing additional customization options soon.</p>
+<p><strong>Check out some cool usage of the Screenleap API from our pilot:</strong></p>
+<p><img loading="lazy" decoding="async" class="alignleft  wp-image-412" style="border: 0px; margin-top: 10px; margin-bottom: 0px;" title="Procore" src="https://blog.screenleap.com/wp-content/uploads/2012/09/ProcoreLogo_Cloud.jpeg" alt="" width="160" height="34" /><span style="font-size: 80%;"><a href="http://www.procore.com">Procore</a>&#8216;s cloud-based construction project management software is used on thousands of projects around the globe. Procore provides seamless collaboration among large, diverse teams, from office managers to architects to on-site construction managers, and everyone in between. The Screenleap API facilitates even <span class="shortcode-typography" style="font-family: 'Cantarell'; font-size: 18px; color: #188218;"><strong>faster collaboration</strong></span> by effectively integrating screen sharing into Procore&#8217;s cloud-based construction software application. Procore takes pride in listening to its clients: they asked for faster collaboration and that is exactly what the Screenleap API integration achieves.</span></p>
+<p><div class="woo-sc-quote boxed"><p>Using the Screenleap API will give us a significant competitive advantage.</p></div></p>
+<p><img loading="lazy" decoding="async" class="alignleft  wp-image-391" style="border: 0px; margin-top: 0px; margin-bottom: 0px;" title="Live Ninja" src="https://blog.screenleap.com/wp-content/uploads/2012/09/Live-Ninja-PNG-Stacked-Black-Box-Full-Color-1000x655.png" alt="" width="160" height="107" /><span style="font-size: 80%;"><a title="LiveNinja" href="http://liveninja.com">LiveNinja</a> is an online platform that enables experts &#8211; in just about anything &#8211; to offer consultation through live video chat. Often, the most effective way to <span class="shortcode-typography" style="font-family: 'Cantarell'; font-size: 18px; color: #188218;"><strong>teach others</strong></span> is to demonstrate with tools from your own computer. With the Screenleap API, LiveNinja was able to quickly integrate screen sharing into their site, so their ninjas will soon be able to bring their consulting to a whole new level.</span></p>
+<p><div class="woo-sc-quote boxed"><p>The screenleap implementation works exceptionally well!</p></div></p>
+<p><img loading="lazy" decoding="async" class="alignleft size-full wp-image-419" style="border: 0px; margin-top: 0px; margin-bottom: 0px;" title="medi-tec" src="https://blog.screenleap.com/wp-content/uploads/2012/09/meditec.jpeg" alt="" width="134" height="85" /><span style="font-size: 80%;"><a href="http://medi-tec.info">Medi-Tec</a> creates medical software solutions, and they pride themselves on quality customer support. They integrated screen sharing through the Screenleap API in order to better <span class="shortcode-typography" style="font-family: 'Cantarell'; font-size: 18px; color: #188218;"><strong>support customers</strong></span>. They can now instantly demonstrate solutions or have customers demonstrate support issues, all through their existing website.</span></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.screenleap.com/2012/09/19/add-screen-sharing-to-your-site-with-the-screenleap-api/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">383</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
+
+Page Caching using Disk: Enhanced (SSL caching disabled) 
+
+Served from: blog.screenleap.com @ 2025-12-22 00:27:34 by W3 Total Cache
+-->

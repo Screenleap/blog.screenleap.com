@@ -1,0 +1,46 @@
+.textwidget {
+    font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
+}
+
+blockquote {
+    border-left: none;
+}
+
+h1.title {
+    font-weight: bold !important;
+}
+
+h2 {
+    font-family: 'Lucida Grande', Verdana, Arial, sans-serif !important;
+}
+
+.entry blockquote  { background: no-repeat 0 12px; padding: 10px 20px 10px 50px; color: #444; }
+.entry blockquote p  { font-style:italic; }
+
+@media screen and (max-device-width: 480px) {
+    #main {
+        width: 100% !important;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}
+
+@media screen and (max-device-width: 480px) {
+    .tags a, .post-entries a, #respond label {
+        font-size: 24px !important;
+    }
+
+    .pagination a.page-numbers {
+        font-size: 36px !important;
+    }
+}
+
+#blog #content .breadcrumb .breadcrumb-trail {
+    color: #666 !important;
+}
+
+.breadcrumb-title {
+    font-weight: bold;
+}
